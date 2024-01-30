@@ -1,0 +1,115 @@
+GET http://localhost:7777/auth/
+
+###
+POST http://localhost:7777/auth/signup
+Content-Type: application/json
+
+{
+    "name":"Raheem",
+    "email":"Raheem1@gmail.com",
+    "phoneNumber":"7013001453",
+    "gender":"Male",
+    "password":"Raheem1@123"
+}
+
+###
+POST http://localhost:7777/auth/login
+Content-Type: application/json
+
+{
+    "email":"Raheem1@gmail.com",
+    "password":"Raheem1@123"
+}
+
+###
+GET http://localhost:7777/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MjUwODg1OGEwNmIxOTA5OWIxODhkZSIsImlhdCI6MTY5NzUzOTMzMywiZXhwIjoxNjk3NTUzNzMzfQ.U6amPF0Pcpd63K_h9UOoas22-Anz0Xn6F1Rxu0YBilk
+###
+POST http://localhost:7777/api/addmedicine
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTA3NDIzMCwiZXhwIjoxNzAxMDg4NjMwfQ.3mi0qJu_801zvR2-2bGbGziShZEIKld2Zkg9cUUG1Wo
+
+{
+    "name":"Dolo650",
+    "description":"fever and body pain dshdehgdie dhidiwd  qdhiqdnkq dks"
+}
+
+###
+GET http://localhost:7777/api/get-medicines
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTMzMzA5OSwiZXhwIjoxNzAxMzQ3NDk5fQ.KZ8fy56PdF8Eb2APQNJUUyuyJVElT2dsuIqGJt7rDcE
+###
+GET http://localhost:7777/api/get-data
+###
+PUT http://localhost:7777/api/update-medicine/65684725d327a450946035c1
+Content-Type: application/json
+
+
+{
+    "name":"Dolo",
+    "description":"lkdjladyadbadb"
+}
+
+###
+DELETE http://localhost:7777/api/delete-medicine/6566d25fcbd3fbb423e543dc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTIzOTkyOCwiZXhwIjoxNzAxMjU0MzI4fQ.R0Nf-tDpZFKntqdbfMaaf4gPqldXQTqej-Qx2d_SOwk
+
+###
+POST http://localhost:7777/api/manageadd-medicine
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTI0MTU0MywiZXhwIjoxNzAxMjU1OTQzfQ.b6VE26uzV_-JuBNHv48ivp2tIFZDX9wCCVH-DNs0zOI
+
+{
+    "name":"Dolo650",
+    "medicineCategory":"fever",
+    "description":"body pains and temp",
+    "price":"5",
+    "totalQuantity":"10",
+    "manufacturingCompany":"Lupin"
+}
+
+###
+GET http://localhost:7777/api/get-managedata
+
+###
+
+POST http://localhost:7777/api/medicine-sales
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTMyNjE5MSwiZXhwIjoxNzAxMzQwNTkxfQ.eMLRdGcKoGWZw_FulM6awku40FDLsEDS5sgHCcQgLVY
+
+{
+    "no":"01",
+    "medicines":"Dolo",
+    "totalPrice":"50",
+    "patient":"Max"
+    
+}
+###
+GET http://localhost:7777/api/get-medicinesalesdata
+
+###
+GET http://localhost:7777/api/medicinesalesdtata?search=Dolo
+###
+PUT http://localhost:7777/api/medicinesalesdtata-update/6569784ad8609a1427ef1b4a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTQxMTc3MywiZXhwIjoxNzAxNDI2MTczfQ.M7Y_2R9_XiHKYKyr7jziU8bzgacX1XqG-MNyF3A0Gf4
+
+{
+    "no":"03",
+    "medicines":"Espine",
+    "totalPrice":"340",
+    "patient":"Lopez"
+    
+}
+
+###
+POST http://localhost:7777/api/process-payment
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NWQ5ODk1NzcyN2VlMzhkOGU1MWQzMCIsImlhdCI6MTcwMTMzNzQ0NCwiZXhwIjoxNzAxMzUxODQ0fQ.94_ZBLMS3zgRIhwc95ArsWZTnXAdMcj5tYP7df8ZKbA
+
+{
+    "amount":"1000",
+    "cardNumber":"1122334455667788",
+    "expiryDate":"01/26",
+    "cvc":"098"
+    
+}
